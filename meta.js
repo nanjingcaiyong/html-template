@@ -41,7 +41,6 @@ module.exports = {
       message: 'Author',
     },
     autoInstall: {
-      when: 'isNotTest',
       type: 'list',
       message:
         'Should we run `install` for you after the project has been created? (recommended)',
