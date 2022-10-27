@@ -39,7 +39,35 @@ module.exports = {
     author: {
       type: 'string',
       message: 'Author',
-    }
+    },
+    autoInstall: {
+      when: 'isNotTest',
+      type: 'list',
+      message:
+        'Should we run `install` for you after the project has been created? (recommended)',
+      choices: [
+        {
+          name: 'Yes, use Pnpm',
+          value: 'pnpm',
+          short: 'pnpm',
+        },
+        {
+          name: 'Yes, use NPM',
+          value: 'npm',
+          short: 'npm',
+        },
+        {
+          name: 'Yes, use Yarn',
+          value: 'yarn',
+          short: 'yarn',
+        },
+        {
+          name: 'No, I will handle that myself',
+          value: false,
+          short: 'no',
+        },
+      ],
+    },
   },
   filters: {},
   complete: function(data, { chalk }) {
