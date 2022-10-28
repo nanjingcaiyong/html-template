@@ -21,8 +21,8 @@ exports.sortDependencies = function sortDependencies(data) {
 }
 
 /**
- * Runs `npm install` in the project directory
- * @param {string} cwd Path of the created project directory
+ * 在创建的项目目录下运行`npm install`
+ * @param { cwd:string }  新创建项目的地址
  * @param {object} data Data from questionnaire
  */
 exports.installDependencies = function installDependencies(
@@ -38,8 +38,8 @@ exports.installDependencies = function installDependencies(
 }
 
 /**
- * Runs `npm run lint -- --fix` in the project directory
- * @param {string} cwd Path of the created project directory
+ * 在创建的项目目录下运行`npm run lint -- --fix`
+ * @param { cwd:string }  新创建项目的地址
  * @param {object} data Data from questionnaire
  */
 exports.runLintFix = function runLintFix(cwd, data, color) {
